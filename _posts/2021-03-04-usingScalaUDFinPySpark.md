@@ -11,7 +11,7 @@ pyspark에서 파이썬 UDF를 써야할때가 많은데, 여러모로 scala나 
 아래 그림과 같이, 파이썬 UDF를 쓰면 각 워커에서 데이터를 다시 직렬화한뒤 파이썬프로세스로 보내줘야한다(4).<br>
 즉, python udf를 쓰면 데이터를 주고 받는 단계가 많다. 
 <br>
-![explain]({{ site.url }}{{ site.baseurl }}/assets/images/202103042326/pysparkUDFStructure.png)
+![explain](./imgs/pysparkUDFStructure.png)
 <br><br><br><br>
 **But!**, 성능이 시급할 때가 있다.<br>
 이런 경우, 스칼라 (또는 자바)로 작성된 udf를 스파크sql로 등록을 하고, pyspark에서 sql함수로 사용 한다.
@@ -40,7 +40,7 @@ LCS??
 - 어뷰징탐지 등, 데이터분석에 많이 쓰이고 있다. 
 - 만약 5000길이의 두 시퀀스를 비교하게되면, 한 쌍을 비교하는데 2억5천 번의 연산이 필요하다.
 - 모든샘플에 대해서 해야하므로... 자칫 소모적인 탐지 방법이 될수 도 있다. 
-![explain]({{ site.url }}{{ site.baseurl }}/assets/images/202103042326/dp_lcs.png)
+![explain](./imgs/dp_lcs.png)
 <br><br>
 #### databricks(또는 zeppelin) notebook 에서 실제 데이터로 비교해본다
  **데이터 설명**<br>
@@ -122,13 +122,13 @@ Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; sup
 ~~~
 
 jar파일이 만들어졌습니다. aatudfs.jar<br>
-![explain]({{ site.url }}{{ site.baseurl }}/assets/images/202103042326/jardone.png)
+![explain](./imgs/jardone.png)
 <br><br>
 ## 3. jar파일을 클러스터에 설치합니다
 (databricks 기준)<br>
-![explain]({{ site.url }}{{ site.baseurl }}/assets/images/202103042326/installLibrary.png)<br><br>
+![explain](./imgs/installLibrary.png)<br><br>
 저기다가 drop 해서 클러스터에 설치합니다.<br>
-![explain]({{ site.url }}{{ site.baseurl }}/assets/images/202103042326/droptoThere.png)
+![explain](./imgs/droptoThere.png)
 <br><br>
 ## 4. pyspark에서 sql함수로 등록을하고 사용합니다.
 ~~~python
