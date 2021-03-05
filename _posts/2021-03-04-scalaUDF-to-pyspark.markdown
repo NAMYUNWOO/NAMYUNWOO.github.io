@@ -1,4 +1,4 @@
-
+---
 defaults:
   # _posts
   - scope:
@@ -56,7 +56,8 @@ LCS??
 
 |avg(시퀀스1길이)|avg(시퀀스2길이)|행개수|
 | :----------------: |:----------------:| :-----:|
-|13624.38|12010.67|21
+|13624.38|12010.67|21|
+
 - python UDF를 사용하기
     - 파이썬으로 작성된 LCS함수를 udf 함수로 만들어서 계산해봤다, 
     - 21개 테스트 케이스를 처리하는데 대략 1분20초가 걸렸다 (Command took 1.20 minutes)
@@ -109,7 +110,7 @@ class LCS_Str extends UDF2[Seq[String],Seq[String], Int] {
 ~~~
 <br><br>
 ## 2. jar파일로 컴파일 합니다.
-~~~sh
+```console
 path/tothe/sbtProejct> sbt clean assembly
  
 Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
@@ -127,7 +128,7 @@ Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; sup
 [info] Packaging C:\Users\xxx\Desktop\scalaSparkLib\aatudfs\target\scala-2.11\aatudfs.jar ...
 [info] Done packaging.
 [success] Total time: 15 s, completed 2019. 6. 11 오후 7:36:34
-~~~
+```
 
 jar파일이 만들어졌습니다. aatudfs.jar<br>
 ![explain]({{ site.url }}{{ site.baseurl }}/assets/images/202103042326/jardone.png)
