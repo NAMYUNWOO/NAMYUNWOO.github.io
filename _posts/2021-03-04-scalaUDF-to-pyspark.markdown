@@ -110,7 +110,7 @@ class LCS_Str extends UDF2[Seq[String],Seq[String], Int] {
 ~~~
 <br><br>
 ## 2. jar파일로 컴파일 합니다.
-```console
+~~~sh
 path/tothe/sbtProejct> sbt clean assembly
 Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
 [info] Loading global plugins from C:\Users\xxx\.sbt\1.0\plugins
@@ -127,7 +127,7 @@ Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; sup
 [info] Packaging C:\Users\xxx\Desktop\scalaSparkLib\aatudfs\target\scala-2.11\aatudfs.jar ...
 [info] Done packaging.
 [success] Total time: 15 s, completed 2019. 6. 11 오후 7:36:34
-```
+~~~
 
 jar파일이 만들어졌습니다. aatudfs.jar<br>
 ![explain]({{ site.url }}{{ site.baseurl }}/assets/images/202103042326/jardone.png)
