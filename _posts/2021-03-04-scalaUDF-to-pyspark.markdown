@@ -112,7 +112,6 @@ class LCS_Str extends UDF2[Seq[String],Seq[String], Int] {
 ## 2. jar파일로 컴파일 합니다.
 ```console
 path/tothe/sbtProejct> sbt clean assembly
- 
 Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256m; support was removed in 8.0
 [info] Loading global plugins from C:\Users\xxx\.sbt\1.0\plugins
 [info] Loading settings for project aatudfs-build from assembly.sbt ...
